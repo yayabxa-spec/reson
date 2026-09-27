@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "RE:SON",
+    "slug": "ai-rp-chat-wcbase",
+    "version": "0.61.1-diy",
+    "orientation": "portrait",
+    "scheme": "reson",
+    "userInterfaceStyle": "automatic",
+    "icon": "./assets/app-icon.png",
+    "splash": {
+      "image": "./assets/app-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ededed"
+    },
+    "android": {
+      "package": "com.reson.chat",
+      "versionCode": 392,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ededed"
+      },
+      "permissions": [
+        "INTERNET",
+        "CAMERA",
+        "RECORD_AUDIO",
+        "READ_MEDIA_IMAGES",
+        "ACCESS_FINE_LOCATION"
+      ],
+      "usesCleartextTraffic": true
+    },
+    "plugins": [
+      "expo-router",
+      "expo-camera",
+      "expo-image-picker",
+      "expo-notifications",
+      "expo-media-library",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "允许应用获取你的位置，用于提供更准确的本地天气。"
+        }
+      ]
+    ]
+  }
+}

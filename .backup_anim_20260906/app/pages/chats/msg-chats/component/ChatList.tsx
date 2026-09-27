@@ -1,0 +1,641 @@
+import { themeColor } from "../../../../../theme/light";
+import MsgReceiver from "../../../../component/business/MsgReceiver";
+import {
+  Animated,
+  Keyboard,
+  ScrollView,
+  Text,
+  TouchableOpacity,
+  View,
+  Image,
+} from "react-native";
+import { useNavigation } from "expo-router";
+import { getSize } from "../../../../../utils.ts";
+import { memo, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { useTheme } from "../../../../../theme/useTheme";
+import type { GroupMemberInfo, LocalMsg } from "../../../../store/localChat";
+import { patRole } from "../../../../store/localChat";
+import RoleAvatar from "../../../../component/complex/RoleAvatar";
+import { cleanChatText } from "../../../../utils/sanitize";
+import { useFontScale } from "../../../../hooks/useFontScale";
+import { useProfile } from "../../../../hooks/useProfile";
+import { readRolesRaw } from "../../../../store/roles";
+import { sqlReadRole } from "../../../../store/appDb";
+import eventBus from "../../../../utils/eventBus";
+
+const USER_PLACEHOLDER = require("../../../../../assets/avatar-default.jpeg");
+
+/** 新消息入场动画：淡入 + 轻微上浮 */
+const AnimatedMessage = memo(
+  ({
+    animate,
+    children,
+    onLayout,
+  }: {
+    animate?: boolean;
+    children: ReactNode;
+    onLayout?: (e: any) => void;
+  }) => {
+    const opacity = useRef(new Animated.Value(animate ? 0 : 1)).current;
+    const translateY = useRef(new Animated.Value(animate ? 12 : 0)).current;
+    useEffect(() => {
+      if (!animate) return;
+      Animated.parallel([
+        Animated.timing(opacity, {
+          toValue: 1,
+          duration: 180,
+          useNativeDriver: true,
+        }),
+        Animated.timing(translateY, {
+          toValue: 0,
+          duration: 220,
+          useNativeDriver: true,
+        }),
+      ]).start();
+    }, [animate, opacity, translateY]);
+    return (
+      <Animated.View onLayout={onLayout} style={{ opacity, transform: [{ translateY }] }}>
+        {children}
+      </Animated.View>
+    );
+  }
+);
+
+/** 新消息悬浮提示：翻历史时收到新消息，底部浮出小胶囊，点击回到最新 */
+const NewMsgHint = memo(
+  ({ visible, onPress }: { visible: boolean; onPress: () => void }) => {
+    const opacity = useRef(new Animated.Value(0)).current;
+    const translateY = useRef(new Animated.Value(12)).current;
+    useEffect(() => {
+      if (!visible) return;
+      opacity.setValue(0);
+      translateY.setValue(12);
+      Animated.parallel([
+        Animated.timing(opacity, {
+          toValue: 1,
+          duration: 160,
+          useNativeDriver: true,
+        }),
+        Animated.timing(translateY, {
+          toValue: 0,
+          duration: 200,
+          useNativeDriver: true,
+        }),
+      ]).start();
+    }, [visible, opacity, translateY]);
+    if (!visible) return null;
+    return (
+      <View
+        pointerEvents="box-none"
+        style={{
+          position: "absolute",
+          left: 0,
+          right: 0,
+          bottom: 10,
+          alignItems: "center",
+        }}
+      >
+        <Animated.View style={{ opacity, transform: [{ translateY }] }}>
+          <TouchableOpacity
+            activeOpacity={0.8}
+            onPress={onPress}
+            style={{
+              flexDirection: "row",
+              alignItems: "center",
+              backgroundColor: "rgba(255,255,255,0.96)",
+              borderRadius: 16,
+              paddingHorizontal: 14,
+              paddingVertical: 7,
+              shadowColor: "#000",
+              shadowOpacity: 0.15,
+              shadowRadius: 6,
+              shadowOffset: { width: 0, height: 2 },
+              elevation: 5,
+            }}
+          >
+            <Text
+              style={{
+                color: "#576B95",
+                fontSize: 13,
+                fontWeight: "600",
+              }}
+            >
+              ↓ 有新消息
+            </Text>
+          </TouchableOpacity>
+        </Animated.View>
+      </View>
+    );
+  }
+);
+
+const PrivateChatList = memo(
+  ({
+    messages,
+    loaded = true,
+    isAITyping,
+    aiAvatar,
+    aiAvatarName = "",
+    groupMemberInfos = [],
+    roleId,
+    convoId,
+    panelOpen = false,
+    targetMsgId,
+    onMsgLongPress,
+    onAtMember,
+    expandedVoiceId,
+  }: {
+    messages: LocalMsg[];
+    loaded?: boolean;
+    isAITyping: boolean;
+    aiAvatar?: string;
+    aiAvatarName?: string;
+    groupMemberInfos?: GroupMemberInfo[];
+    roleId?: string;
+    convoId?: string;
+    panelOpen?: boolean;
+    targetMsgId?: string;
+    onMsgLongPress?: (msg: LocalMsg, x: number, y: number) => void;
+    onAtMember?: (name: string) => void;
+    expandedVoiceId?: string | null;
+  }) => {
+    const { themeColor: tc } = useTheme();
+    const fontScale = useFontScale();
+    const profile = useProfile();
+    const navigate = useNavigation();
+    const scrollRef = useRef<ScrollView>(null);
+    const layoutYRef = useRef<Record<string, number>>({});
+    const scrollToMsgDoneRef = useRef<string | null>(null);
+    const lastTapRef = useRef(0);
+    const avatarTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+    const messagesRef = useRef(messages);
+    messagesRef.current = messages;
+    const stickToBottomRef = useRef(true);
+    const bootedRef = useRef(false);
+    const seenIdsRef = useRef<Set<string>>(new Set(messages.map((m) => m.id)));
+    const lastMsgCountRef = useRef(messages.length);
+    const shakeRoleX = useRef(new Animated.Value(0)).current;
+    const shakeRoleY = useRef(new Animated.Value(0)).current;
+    const shakeRoleR = useRef(new Animated.Value(0)).current;
+    const shakeMeX = useRef(new Animated.Value(0)).current;
+    const shakeMeY = useRef(new Animated.Value(0)).current;
+    const shakeMeR = useRef(new Animated.Value(0)).current;
+    const roleRotate = shakeRoleR.interpolate({
+      inputRange: [-6, 6],
+      outputRange: ["-6deg", "6deg"],
+    });
+    const meRotate = shakeMeR.interpolate({
+      inputRange: [-6, 6],
+      outputRange: ["-6deg", "6deg"],
+    });
+    const [patRoleMsgId, setPatRoleMsgId] = useState<string | null>(null);
+    const [patMeMsgId, setPatMeMsgId] = useState<string | null>(null);
+    const [newMsgHint, setNewMsgHint] = useState(false);
+    const memberMap = useMemo(() => {
+      const map = new Map<string, GroupMemberInfo>();
+      for (const g of groupMemberInfos) map.set(g.name, g);
+      return map;
+    }, [groupMemberInfos]);
+    const isGroup = groupMemberInfos.length > 0;
+    const openRole = (rid?: string) => {
+      if (rid) {
+        navigate.navigate("pages/contacts/screens/friend-info/index", {
+          friendId: rid,
+        });
+      }
+    };
+    // 单击进资料页（延迟 350ms），双击触发拍一拍
+    const handleAiAvatarTap = (msgId?: string) => {
+      const now = Date.now();
+      if (now - lastTapRef.current < 350) {
+        if (avatarTimerRef.current) clearTimeout(avatarTimerRef.current);
+        lastTapRef.current = 0;
+        if (convoId && aiAvatarName) {
+          setPatRoleMsgId(msgId || null);
+          doShake(shakeRoleX, shakeRoleY, shakeRoleR, () =>
+            setPatRoleMsgId(null)
+          );
+          sqlReadRole(roleId || "").then((role) => {
+            patRole(convoId, aiAvatarName, role?.patReply).catch(() => {});
+          });
+        }
+      } else {
+        lastTapRef.current = now;
+        avatarTimerRef.current = setTimeout(() => {
+          openRole(roleId);
+        }, 350);
+      }
+    };
+
+    // 微信式晃动：轻微上浮 + 左右摆动 + 旋转
+    const doShake = (
+      x: Animated.Value,
+      y: Animated.Value,
+      r: Animated.Value,
+      onDone?: () => void
+    ) => {
+      // 先停掉上一段动画，避免新旧动画叠加导致抖动夸张
+      x.stopAnimation();
+      y.stopAnimation();
+      r.stopAnimation();
+      x.setValue(0);
+      y.setValue(0);
+      r.setValue(0);
+      const steps = [
+        { x: -2, y: -3, r: -3 },
+        { x: 2, y: -1, r: 3 },
+        { x: -1, y: -2, r: -2 },
+        { x: 1, y: -1, r: 1 },
+        { x: 0, y: 0, r: 0 },
+      ];
+      const anims: Animated.CompositeAnimation[] = [];
+      for (const s of steps) {
+        anims.push(
+          Animated.parallel([
+            Animated.timing(x, {
+              toValue: s.x,
+              duration: 120,
+              useNativeDriver: true,
+            }),
+            Animated.timing(y, {
+              toValue: s.y,
+              duration: 120,
+              useNativeDriver: true,
+            }),
+            Animated.timing(r, {
+              toValue: s.r,
+              duration: 120,
+              useNativeDriver: true,
+            }),
+          ])
+        );
+      }
+      Animated.sequence(anims).start(() => onDone?.());
+    };
+
+    useEffect(() => {
+      const h = (cid?: string) => {
+        if (cid && cid === convoId) {
+          const lastUser = [...messagesRef.current]
+            .reverse()
+            .find((m) => m.role === "user");
+          setPatMeMsgId(lastUser?.id || null);
+          doShake(shakeMeX, shakeMeY, shakeMeR, () =>
+            setPatMeMsgId(null)
+          );
+        }
+      };
+      eventBus.on("pat-back", h);
+      return () => {
+        eventBus.off("pat-back", h);
+      };
+    }, [convoId]);
+
+    // 记录用户是否在底部：离开底部后新消息不再强制拉到底
+    const handleScroll = (e: any) => {
+      const { contentOffset, layoutMeasurement, contentSize } = e.nativeEvent;
+      const nearBottom =
+        contentOffset.y + layoutMeasurement.height >= contentSize.height - 100;
+      stickToBottomRef.current = nearBottom;
+      if (nearBottom) setNewMsgHint(false);
+    };
+
+    // 只给本次新出现的消息加入场动画（历史消息/重新进入不触发）
+    const animateIds = useMemo(() => {
+      const ids = new Set<string>();
+      for (const m of messages) {
+        if (!seenIdsRef.current.has(m.id)) ids.add(m.id);
+      }
+      if (ids.size) {
+        for (const m of messages) seenIdsRef.current.add(m.id);
+      }
+      return ids;
+    }, [messages]);
+
+    useEffect(() => {
+      const prevLen = lastMsgCountRef.current;
+      lastMsgCountRef.current = messages.length;
+      const grew = messages.length > prevLen;
+      const last = messagesRef.current[messagesRef.current.length - 1];
+      // 自己刚发出的消息：即使之前在看历史，也滚回底部
+      if (last?.role === "user") {
+        stickToBottomRef.current = true;
+        setNewMsgHint(false);
+      } else if (
+        grew &&
+        !stickToBottomRef.current &&
+        last &&
+        last.role !== "system"
+      ) {
+        // 翻看历史时收到新消息：不拉走，浮出小提示
+        setNewMsgHint(true);
+        return;
+      }
+      if (!stickToBottomRef.current) return;
+      setNewMsgHint(false);
+      setTimeout(() => {
+        scrollRef.current?.scrollToEnd({ animated: true });
+      }, 100);
+    }, [messages.length, isAITyping]);
+
+    // 通知点击进入：定位到目标消息（等列表布局完成后滚到该条）
+    useEffect(() => {
+      if (!targetMsgId || scrollToMsgDoneRef.current === targetMsgId) return;
+      const t = setTimeout(() => {
+        const y = layoutYRef.current[targetMsgId];
+        if (y != null) {
+          scrollRef.current?.scrollTo({
+            y: Math.max(0, y - 90),
+            animated: false,
+          });
+          scrollToMsgDoneRef.current = targetMsgId;
+        }
+      }, 350);
+      return () => clearTimeout(t);
+    }, [targetMsgId, messages.length]);
+
+    // 功能面板展开/收起时列表高度变化，自动滚到底部避免消息被遮挡
+    useEffect(() => {
+      if (!stickToBottomRef.current) return;
+      const t = setTimeout(() => {
+        scrollRef.current?.scrollToEnd({ animated: true });
+      }, 300);
+      return () => clearTimeout(t);
+    }, [panelOpen]);
+
+    // 键盘弹出/收起时同样滚到底部
+    useEffect(() => {
+      const show = Keyboard.addListener("keyboardDidShow", () => {
+        if (!stickToBottomRef.current) return;
+        setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 150);
+      });
+      const hide = Keyboard.addListener("keyboardDidHide", () => {
+        if (!stickToBottomRef.current) return;
+        setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 150);
+      });
+      return () => {
+        show.remove();
+        hide.remove();
+      };
+    }, []);
+
+    if (!loaded) {
+      return <View style={{ flex: 1 }} />;
+    }
+    if (messages.length === 0 && !isAITyping) {
+      return (
+        <View style={{ flex: 1, alignItems: "center", paddingTop: 80 }}>
+          <Text style={{ color: tc.text3 }}>
+            {isGroup ? "群聊已创建，发条消息打个招呼吧" : "开始和TA聊天吧"}
+          </Text>
+        </View>
+      );
+    }
+
+    return (
+      <View style={{ flex: 1 }}>
+        <ScrollView
+          ref={scrollRef}
+          style={{ flex: 1 }}
+          contentContainerStyle={{ padding: 12 }}
+          onScroll={handleScroll}
+          scrollEventThrottle={16}
+          onContentSizeChange={() => {
+            if (!stickToBottomRef.current) return;
+            scrollRef.current?.scrollToEnd({ animated: bootedRef.current });
+            bootedRef.current = true;
+          }}
+        >
+        {messages.map((msg) => {
+          const isMe = msg.role === "user";
+          const text = cleanChatText(msg.content || "");
+          const animateIn = animateIds.has(msg.id);
+          if (msg.role === "system") {
+            return (
+              <AnimatedMessage
+                key={msg.id}
+                animate={animateIn}
+              >
+                <View
+                  style={{
+                    marginVertical: 8,
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <Text
+                    style={{
+                      color: "#999",
+                      fontSize: Math.round(12 * fontScale),
+                      backgroundColor: "rgba(0,0,0,0.05)",
+                      paddingHorizontal: 10,
+                      paddingVertical: 4,
+                      borderRadius: 4,
+                    }}
+                  >
+                    {text}
+                  </Text>
+                </View>
+              </AnimatedMessage>
+            );
+          }
+          const member = msg.senderName
+            ? memberMap.get(msg.senderName)
+            : undefined;
+          return (
+            <AnimatedMessage
+              key={msg.id}
+              animate={animateIn}
+              onLayout={(e) => {
+                layoutYRef.current[msg.id] = e.nativeEvent.layout.y;
+              }}
+            >
+              <View
+                style={{
+                  marginBottom: 16,
+                  alignItems: isMe ? "flex-end" : "flex-start",
+                }}
+              >
+                {!isMe && msg.senderName && (
+                  <Text
+                    style={{
+                      color: tc.text3,
+                      fontSize: 12,
+                      marginBottom: 4,
+                      marginLeft: getSize(53),
+                    }}
+                  >
+                    {msg.senderName}
+                  </Text>
+                )}
+                {msg.replyTo && (
+                  <View
+                    style={{
+                      flexDirection: "row",
+                      justifyContent: isMe ? "flex-end" : "flex-start",
+                      marginBottom: 2,
+                    }}
+                  >
+                    <View
+                      style={{
+                        backgroundColor: "rgba(0,0,0,0.05)",
+                        borderRadius: 4,
+                        paddingHorizontal: 8,
+                        paddingVertical: 4,
+                        maxWidth: getSize(220),
+                      }}
+                    >
+                      <Text
+                        numberOfLines={2}
+                        style={{ fontSize: 12, color: "#999" }}
+                      >
+                        {msg.replyTo.senderName
+                          ? `${msg.replyTo.senderName}：`
+                          : ""}
+                        {msg.replyTo.content}
+                      </Text>
+                    </View>
+                  </View>
+                )}
+                <View
+                  style={{
+                    flexDirection: "row",
+                    justifyContent: isMe ? "flex-end" : "flex-start",
+                  }}
+                >
+                  {isMe ? (
+                    <>
+                      <MsgReceiver
+                        msgId={msg.id}
+                        msgType={msg.images ? "img" : msg.audio ? "voice" : "text"}
+                        msgSenderId="local-user"
+                        type="right"
+                        text={msg.images?.[0] || msg.audio || text}
+                        caption={msg.images ? undefined : msg.content}
+                        showCaption={msg.audio && msg.id === expandedVoiceId}
+                        onLongPress={(e) =>
+                          onMsgLongPress?.(
+                            msg,
+                            e?.nativeEvent?.pageX ?? 0,
+                            e?.nativeEvent?.pageY ?? 0
+                          )
+                        }
+                      />
+                      <Animated.View
+                        style={{
+                          transform:
+                            msg.id === patMeMsgId
+                              ? [
+                                  { translateX: shakeMeX },
+                                  { translateY: shakeMeY },
+                                  { rotate: meRotate },
+                                ]
+                              : [],
+                        }}
+                      >
+                        <Image
+                          source={
+                            profile.avatar
+                              ? { uri: profile.avatar }
+                              : USER_PLACEHOLDER
+                          }
+                          style={{
+                            marginLeft: 8,
+                            width: getSize(45),
+                            height: getSize(45),
+                            borderRadius: Math.round(getSize(45) * 0.28),
+                          }}
+                        />
+                      </Animated.View>
+                    </>
+                  ) : member ? (
+                    <>
+                      <TouchableOpacity
+                        onPress={() => openRole(member.roleId)}
+                        onLongPress={() => onAtMember?.(member.name)}
+                      >
+                        <RoleAvatar
+                          avatar={member.avatar}
+                          name={member.name}
+                          size={getSize(45)}
+                          style={{ marginRight: 8 }}
+                        />
+                      </TouchableOpacity>
+                      <MsgReceiver
+                        msgId={msg.id}
+                        msgType={msg.images ? "img" : msg.audio ? "voice" : "text"}
+                        msgSenderId="local-ai"
+                        type="left"
+                        text={msg.images?.[0] || msg.audio || text}
+                        caption={msg.images ? undefined : msg.content}
+                        showCaption={msg.audio && msg.id === expandedVoiceId}
+                        onLongPress={(e) =>
+                          onMsgLongPress?.(
+                            msg,
+                            e?.nativeEvent?.pageX ?? 0,
+                            e?.nativeEvent?.pageY ?? 0
+                          )
+                        }
+                      />
+                    </>
+                  ) : (
+                    <>
+                      <Animated.View
+                        style={{
+                          transform:
+                            msg.id === patRoleMsgId
+                              ? [
+                                  { translateX: shakeRoleX },
+                                  { translateY: shakeRoleY },
+                                  { rotate: roleRotate },
+                                ]
+                              : [],
+                        }}
+                      >
+                        <TouchableOpacity onPress={() => handleAiAvatarTap(msg.id)}>
+                          <RoleAvatar
+                            avatar={aiAvatar}
+                            name={aiAvatarName}
+                            size={getSize(45)}
+                            style={{ marginRight: 8 }}
+                          />
+                        </TouchableOpacity>
+                      </Animated.View>
+                      <MsgReceiver
+                        msgId={msg.id}
+                        msgType={msg.images ? "img" : msg.audio ? "voice" : "text"}
+                        msgSenderId="local-ai"
+                        type="left"
+                        text={msg.images?.[0] || msg.audio || text}
+                        caption={msg.images ? undefined : msg.content}
+                        showCaption={msg.audio && msg.id === expandedVoiceId}
+                        onLongPress={(e) =>
+                          onMsgLongPress?.(
+                            msg,
+                            e?.nativeEvent?.pageX ?? 0,
+                            e?.nativeEvent?.pageY ?? 0
+                          )
+                        }
+                      />
+                    </>
+                  )}
+                </View>
+              </View>
+            </AnimatedMessage>
+          );
+        })}
+        </ScrollView>
+        <NewMsgHint
+          visible={newMsgHint}
+          onPress={() => {
+            setNewMsgHint(false);
+            stickToBottomRef.current = true;
+            scrollRef.current?.scrollToEnd({ animated: true });
+          }}
+        />
+      </View>
+    );
+  }
+);
+
+export default PrivateChatList;

@@ -1,0 +1,16 @@
+[
+  
+  {
+    "id": 4,
+    "type": "",
+    "userId": "",
+    "msgId": "",
+    "image": "",
+    "isSticky": false,
+    "avatar": "@/assets/avatar.png",
+    "userName": "Bella",
+    "unReadCount": 1,
+    "latestMessage": "latestMessage",
+    "time": "00:00"
+  }
+]

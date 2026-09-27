@@ -1,0 +1,44 @@
+import { Pressable } from "react-native";
+import GoBack from "../GoBack";
+
+export type TNavigationOptions = any;
+export const useCommonNavigateProps = (props: {
+  title?: string;
+  rightComp: () => React.ReactNode;
+  goBackColor?: string;
+  goBackHandler?: () => void;
+  rightHandler?: () => void;
+}): TNavigationOptions => {
+  const {
+    title,
+    rightComp,
+    goBackColor,
+    goBackHandler,
+    rightHandler,
+    ...rest
+  } = props;
+  return {
+    title: title,
+    headerTitleAlign: "center",
+
+    headerLeft: () => (
+      <Pressable
+        onPress={() => {
+          goBackHandler?.();
+        }}
+      >
+        <GoBack color={goBackColor} />
+      </Pressable>
+    ),
+    headerRight: () => (
+      <Pressable
+        onPress={() => {
+          rightHandler?.();
+        }}
+      >
+        {rightComp}
+      </Pressable>
+    ),
+    ...rest,
+  };
+};

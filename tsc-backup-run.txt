@@ -1,0 +1,670 @@
+E:/RE-SON_work_20260827_004629/app/component/base/ActionBar/ActionBar.tsx(15,40): error TS2339: Property 'children' does not exist on type 'ActionBarProps'.
+E:/RE-SON_work_20260827_004629/app/component/base/ActionBar/ActionBar.tsx(16,12): error TS2339: Property 'children' does not exist on type 'ActionBarProps'.
+E:/RE-SON_work_20260827_004629/app/component/base/ActionBar/ActionBar.tsx(22,39): error TS2339: Property 'children' does not exist on type 'ActionBarProps'.
+E:/RE-SON_work_20260827_004629/app/component/base/ActionBar/ActionBar.tsx(26,15): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Object literal may only specify known properties, and 'index' does not exist in type 'Partial<unknown> & Attributes'.
+E:/RE-SON_work_20260827_004629/app/component/base/ActionBar/ActionBarButton.tsx(51,14): error TS2339: Property 'children' does not exist on type 'ActionBarButtonProps'.
+E:/RE-SON_work_20260827_004629/app/component/base/ActionBar/ActionBarButton.tsx(51,31): error TS2339: Property 'children' does not exist on type 'ActionBarButtonProps'.
+E:/RE-SON_work_20260827_004629/app/component/base/ActionBar/ActionBarIcon.tsx(28,40): error TS2339: Property 'children' does not exist on type 'ActionBarIconProps'.
+E:/RE-SON_work_20260827_004629/app/component/base/ActionBar/style.ts(15,7): error TS2322: Type 'string' is not assignable to type 'DimensionValue | undefined'.
+E:/RE-SON_work_20260827_004629/app/component/base/ActionBar/style.ts(20,7): error TS2353: Object literal may only specify known properties, and 'color' does not exist in type 'ViewStyle'.
+E:/RE-SON_work_20260827_004629/app/component/base/ActionSheet/style.ts(54,7): error TS2353: Object literal may only specify known properties, and 'color' does not exist in type 'ViewStyle'.
+E:/RE-SON_work_20260827_004629/app/component/base/Badge/Badge.tsx(54,63): error TS2736: Operator '+' cannot be applied to type 'string | number | bigint | boolean'.
+E:/RE-SON_work_20260827_004629/app/component/base/Badge/Badge.tsx(62,9): error TS2365: Operator '>' cannot be applied to types 'number' and 'string | number'.
+E:/RE-SON_work_20260827_004629/app/component/base/Cell/Cell.tsx(28,25): error TS2749: 'RNTouchableOpacity' refers to a value, but is being used as a type here. Did you mean 'typeof RNTouchableOpacity'?
+E:/RE-SON_work_20260827_004629/app/component/base/Cell/Cell.tsx(45,5): error TS2339: Property 'theme' does not exist on type 'CellProps'.
+E:/RE-SON_work_20260827_004629/app/component/base/Dialog/Dialog.tsx(100,6): error TS2322: Type '{ children: (false | Element | undefined)[]; style: ViewStyle[]; }' is not assignable to type 'IntrinsicAttributes & ActionBarProps'.
+  Property 'children' does not exist on type 'IntrinsicAttributes & ActionBarProps'.
+E:/RE-SON_work_20260827_004629/app/component/base/Dialog/Dialog.tsx(102,20): error TS2339: Property 'Button' does not exist on type 'FC<ActionBarProps>'.
+E:/RE-SON_work_20260827_004629/app/component/base/Dialog/Dialog.tsx(115,20): error TS2339: Property 'Button' does not exist on type 'FC<ActionBarProps>'.
+E:/RE-SON_work_20260827_004629/app/component/base/Dialog/Dialog.tsx(141,39): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ width: string | number; }' is not assignable to type 'ViewStyle | Falsy | RecursiveArray<ViewStyle | Falsy> | readonly (ViewStyle | Falsy)[]'.
+      Types of property 'width' are incompatible.
+        Type 'string | number' is not assignable to type 'DimensionValue | undefined'.
+          Type 'string' is not assignable to type 'DimensionValue | undefined'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ width: string | number; }' is not assignable to type 'ViewStyle | Falsy | RecursiveArray<ViewStyle | Falsy> | readonly (ViewStyle | Falsy)[]'.
+      Types of property 'width' are incompatible.
+        Type 'string | number' is not assignable to type 'DimensionValue | undefined'.
+          Type 'string' is not assignable to type 'DimensionValue | undefined'.
+E:/RE-SON_work_20260827_004629/app/component/base/Field/Field.tsx(17,55): error TS2339: Property 'theme' does not exist on type 'FieldProps'.
+E:/RE-SON_work_20260827_004629/app/component/base/Field/Field.tsx(36,38): error TS2345: Argument of type '{ message: string | number | bigint | true | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<...> | FieldTooltipProps; }' is not assignable to parameter of type 'DialogProps'.
+  Types of property 'message' are incompatible.
+    Type 'string | number | bigint | true | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<...> | FieldTooltipProps' is not assignable to type 'ReactNode'.
+      Type 'FieldTooltipProps' is not assignable to type 'ReactNode'.
+        Type 'FieldTooltipProps' is missing the following properties from type 'ReactPortal': type, props, key
+E:/RE-SON_work_20260827_004629/app/component/base/Field/Field.tsx(59,13): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ width: string | number; }' is not assignable to type 'ViewStyle | Falsy | RecursiveArray<ViewStyle | Falsy> | readonly (ViewStyle | Falsy)[]'.
+      Types of property 'width' are incompatible.
+        Type 'string | number' is not assignable to type 'DimensionValue | undefined'.
+          Type 'string' is not assignable to type 'DimensionValue | undefined'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ width: string | number; }' is not assignable to type 'ViewStyle | Falsy | RecursiveArray<ViewStyle | Falsy> | readonly (ViewStyle | Falsy)[]'.
+      Types of property 'width' are incompatible.
+        Type 'string | number' is not assignable to type 'DimensionValue | undefined'.
+          Type 'string' is not assignable to type 'DimensionValue | undefined'.
+E:/RE-SON_work_20260827_004629/app/component/base/Field/style.ts(28,7): error TS2353: Object literal may only specify known properties, and 'textAlign' does not exist in type 'ViewStyle'.
+E:/RE-SON_work_20260827_004629/app/component/base/Image/Image.tsx(23,5): error TS2339: Property 'onLoad' does not exist on type 'ImageProps'.
+E:/RE-SON_work_20260827_004629/app/component/base/Image/Image.tsx(24,5): error TS2339: Property 'onError' does not exist on type 'ImageProps'.
+E:/RE-SON_work_20260827_004629/app/component/base/Image/Image.tsx(34,5): error TS2339: Property 'fadeDuration' does not exist on type 'ImageProps'.
+E:/RE-SON_work_20260827_004629/app/component/base/Image/type.ts(7,3): error TS2305: Module '"react-native"' has no exported member 'Omit'.
+E:/RE-SON_work_20260827_004629/app/component/base/ImagePreview/ImagePreview.tsx(46,30): error TS2345: Argument of type '{ black: "#000"; white: "#fff"; gray_1: "#f7f8fa"; gray_2: "#f2f3f5"; gray_3: "#ebedf0"; gray_4: "#dcdee0"; gray_5: "#c8c9cc"; gray_6: "#969799"; gray_7: "#646566"; gray_8: "#323233"; red: "#ee0a24"; blue: "#1989fa"; orange: "#ff976a"; orange_dark: "#ed6a0c"; orange_light: "#fffbe8"; green: "#07c160"; primary_color:...' is not assignable to parameter of type '{ dark: boolean; button_mini_height: number; button_mini_padding_horizontal: number; button_mini_font_size: number; button_small_height: number; button_small_padding_horizontal: number; ... 471 more ...; border_radius_max: 999; }'.
+  Type '{ black: "#000"; white: "#fff"; gray_1: "#f7f8fa"; gray_2: "#f2f3f5"; gray_3: "#ebedf0"; gray_4: "#dcdee0"; gray_5: "#c8c9cc"; gray_6: "#969799"; gray_7: "#646566"; gray_8: "#323233"; red: "#ee0a24"; blue: "#1989fa"; orange: "#ff976a"; orange_dark: "#ed6a0c"; orange_light: "#fffbe8"; green: "#07c160"; primary_color:...' is missing the following properties from type '{ dark: boolean; button_mini_height: number; button_mini_padding_horizontal: number; button_mini_font_size: number; button_small_height: number; button_small_padding_horizontal: number; ... 471 more ...; border_radius_max: 999; }': dark, button_mini_height, button_mini_padding_horizontal, button_mini_font_size, and 419 more.
+E:/RE-SON_work_20260827_004629/app/component/base/ImagePreview/ImagePreview.tsx(120,15): error TS2322: Type '{ source: { uri: string; }; resizeMode: string; style: { width: "100%"; height: "100%"; }; }' is not assignable to type 'IntrinsicAttributes & ImageProps'.
+  Property 'source' does not exist on type 'IntrinsicAttributes & ImageProps'.
+E:/RE-SON_work_20260827_004629/app/component/base/ImagePreview/ImagePreview.tsx(137,13): error TS2322: Type '{ source: { uri: string; }; resizeMode: string; style: { width: "100%"; height: "100%"; }; }' is not assignable to type 'IntrinsicAttributes & ImageProps'.
+  Property 'source' does not exist on type 'IntrinsicAttributes & ImageProps'.
+E:/RE-SON_work_20260827_004629/app/component/base/ImagePreview/style.ts(29,20): error TS2339: Property 'image_preview_close_icon_margin' does not exist on type '{ dark: boolean; button_mini_height: number; button_mini_padding_horizontal: number; button_mini_font_size: number; button_small_height: number; button_small_padding_horizontal: number; ... 471 more ...; border_radius_max: 999; }'.
+E:/RE-SON_work_20260827_004629/app/component/base/ImagePreview/style.ts(30,18): error TS2339: Property 'image_preview_close_icon_margin' does not exist on type '{ dark: boolean; button_mini_height: number; button_mini_padding_horizontal: number; button_mini_font_size: number; button_small_height: number; button_small_padding_horizontal: number; ... 471 more ...; border_radius_max: 999; }'.
+E:/RE-SON_work_20260827_004629/app/component/base/ImagePreview/style.ts(40,20): error TS2339: Property 'image_preview_index_text_color' does not exist on type '{ dark: boolean; button_mini_height: number; button_mini_padding_horizontal: number; button_mini_font_size: number; button_small_height: number; button_small_padding_horizontal: number; ... 471 more ...; border_radius_max: 999; }'.
+E:/RE-SON_work_20260827_004629/app/component/base/ImagePreview/style.ts(41,23): error TS2339: Property 'image_preview_index_font_size' does not exist on type '{ dark: boolean; button_mini_height: number; button_mini_padding_horizontal: number; button_mini_font_size: number; button_small_height: number; button_small_padding_horizontal: number; ... 471 more ...; border_radius_max: 999; }'.
+E:/RE-SON_work_20260827_004629/app/component/base/ImagePreview/style.ts(42,25): error TS2339: Property 'image_preview_index_line_height' does not exist on type '{ dark: boolean; button_mini_height: number; button_mini_padding_horizontal: number; button_mini_font_size: number; button_small_height: number; button_small_padding_horizontal: number; ... 471 more ...; border_radius_max: 999; }'.
+E:/RE-SON_work_20260827_004629/app/component/base/ImagePreview/style.ts(45,21): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/component/base/ImagePreview/style.ts(46,30): error TS2339: Property 'image_preview_overlay_background' does not exist on type '{ dark: boolean; button_mini_height: number; button_mini_padding_horizontal: number; button_mini_font_size: number; button_small_height: number; button_small_padding_horizontal: number; ... 471 more ...; border_radius_max: 999; }'.
+E:/RE-SON_work_20260827_004629/app/component/base/Input/BaseInput.tsx(42,5): error TS2339: Property 'theme' does not exist on type 'BaseInputProps'.
+E:/RE-SON_work_20260827_004629/app/component/base/Input/BaseInput.tsx(154,8): error TS2769: No overload matches this call.
+  Overload 2 of 2, '(props: TextInputProps, context: any): TextInput', gave the following error.
+    Type '(e: InputFousEvent) => void' is not assignable to type '(e: BlurEvent) => void'.
+      Types of parameters 'e' and 'e' are incompatible.
+        Type 'BlurEvent' is not assignable to type 'InputFousEvent'.
+          Type 'TargetedEvent' is missing the following properties from type 'TextInputFocusEventData': text, eventCount
+  Overload 2 of 2, '(props: TextInputProps, context: any): TextInput', gave the following error.
+    Type '(e: InputFousEvent) => void' is not assignable to type '(e: FocusEvent) => void'.
+      Types of parameters 'e' and 'e' are incompatible.
+        Type 'FocusEvent' is not assignable to type 'InputFousEvent'.
+          Type 'TargetedEvent' is missing the following properties from type 'TextInputFocusEventData': text, eventCount
+E:/RE-SON_work_20260827_004629/app/component/base/Input/style.ts(28,7): error TS2353: Object literal may only specify known properties, and 'color' does not exist in type 'ViewStyle'.
+E:/RE-SON_work_20260827_004629/app/component/base/Overlay/style.ts(6,21): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/component/base/PanningViews/PanDismissibleView.tsx(409,21): error TS2339: Property 'children' does not exist on type 'Readonly<Props>'.
+E:/RE-SON_work_20260827_004629/app/component/base/PanningViews/PanGestureView.tsx(35,17): error TS2554: Expected 1 arguments, but got 0.
+E:/RE-SON_work_20260827_004629/app/component/base/PanningViews/PanGestureView.tsx(36,18): error TS2554: Expected 1 arguments, but got 0.
+E:/RE-SON_work_20260827_004629/app/component/base/PanningViews/PanResponderView.tsx(18,24): error TS2554: Expected 1 arguments, but got 0.
+E:/RE-SON_work_20260827_004629/app/component/base/PanningViews/PanResponderView.tsx(19,16): error TS2554: Expected 1 arguments, but got 0.
+E:/RE-SON_work_20260827_004629/app/component/base/PanningViews/PanResponderView.tsx(20,15): error TS2554: Expected 1 arguments, but got 0.
+E:/RE-SON_work_20260827_004629/app/component/base/Popover/Popover.tsx(92,17): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Object literal may only specify known properties, and 'color' does not exist in type 'Partial<unknown> & Attributes'.
+E:/RE-SON_work_20260827_004629/app/component/base/Popover/Popover.tsx(115,45): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Object literal may only specify known properties, and 'onPress' does not exist in type 'Partial<unknown> & Attributes'.
+E:/RE-SON_work_20260827_004629/app/component/base/Popover/Popover.tsx(119,9): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: PublicPopoverProps): Popover', gave the following error.
+    Type 'RefObject<null>' is not assignable to type 'ReactNode | Rect | RefObject<Component<{}, {}, any>> | ((sourceRef: RefObject<Component<{}, {}, any>>, openPopover: () => void) => ReactNode) | Point'.
+      Type 'RefObject<null>' is not assignable to type 'RefObject<Component<{}, {}, any>>'.
+        Type 'null' is not assignable to type 'Component<{}, {}, any>'.
+  Overload 2 of 2, '(props: PublicPopoverProps, context: any): Popover', gave the following error.
+    Type 'RefObject<null>' is not assignable to type 'ReactNode | Rect | RefObject<Component<{}, {}, any>> | ((sourceRef: RefObject<Component<{}, {}, any>>, openPopover: () => void) => ReactNode) | Point'.
+      Type 'RefObject<null>' is not assignable to type 'RefObject<Component<{}, {}, any>>'.
+        Type 'null' is not assignable to type 'Component<{}, {}, any>'.
+E:/RE-SON_work_20260827_004629/app/component/base/Popup/DismissibleView.tsx(48,26): error TS2554: Expected 1 arguments, but got 0.
+E:/RE-SON_work_20260827_004629/app/component/base/Popup/Popup.tsx(19,5): error TS2339: Property 'theme' does not exist on type 'PopupProps'.
+E:/RE-SON_work_20260827_004629/app/component/base/Swiper/style.ts(25,15): error TS2872: This kind of expression is always truthy.
+E:/RE-SON_work_20260827_004629/app/component/base/Swiper/style.ts(27,14): error TS2872: This kind of expression is always truthy.
+E:/RE-SON_work_20260827_004629/app/component/base/Swiper/style.ts(43,15): error TS2872: This kind of expression is always truthy.
+E:/RE-SON_work_20260827_004629/app/component/base/Swiper/Swiper.tsx(36,25): error TS2554: Expected 1 arguments, but got 0.
+E:/RE-SON_work_20260827_004629/app/component/base/Swiper/Swiper.tsx(178,9): error TS2345: Argument of type 'Element | undefined' is not assignable to parameter of type 'Element'.
+  Type 'undefined' is not assignable to type 'ReactElement<any, any>'.
+E:/RE-SON_work_20260827_004629/app/component/base/Swiper/Swiper.tsx(178,21): error TS18049: 'children' is possibly 'null' or 'undefined'.
+E:/RE-SON_work_20260827_004629/app/component/base/Swiper/Swiper.tsx(178,21): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<...>'.
+  No index signature with a parameter of type 'number' was found on type 'string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<...>'.
+E:/RE-SON_work_20260827_004629/app/component/base/Transitions/Fade.tsx(23,6): error TS2339: Property 'defaultProps' does not exist on type 'ForwardRefExoticComponent<Omit<FadeProps, "ref"> & RefAttributes<any>>'.
+E:/RE-SON_work_20260827_004629/app/component/base/Transitions/ScaleFade.tsx(23,11): error TS2339: Property 'defaultProps' does not exist on type 'ForwardRefExoticComponent<Omit<ScaleFadeProps, "ref"> & RefAttributes<any>>'.
+E:/RE-SON_work_20260827_004629/app/component/base/Transitions/Slide.tsx(90,11): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Record<Placement, any>'.
+E:/RE-SON_work_20260827_004629/app/component/base/Transitions/Slide.tsx(91,41): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Record<Placement, any>'.
+E:/RE-SON_work_20260827_004629/app/component/base/Transitions/Slide.tsx(115,7): error TS2339: Property 'defaultProps' does not exist on type 'ForwardRefExoticComponent<Omit<SlideProps, "ref"> & RefAttributes<any>>'.
+E:/RE-SON_work_20260827_004629/app/component/base/Transitions/Transition.tsx(101,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'typeof Animated'.
+E:/RE-SON_work_20260827_004629/app/component/business/AudioRecorder/index.tsx(22,26): error TS7031: Binding element 'onVoiceEnd' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/business/AudioRecorder/index.tsx(32,16): error TS2339: Property 'isRecording' does not exist on type 'RecordingStatus'.
+E:/RE-SON_work_20260827_004629/app/component/business/AudioRecorder/index.tsx(32,61): error TS2339: Property 'durationMillis' does not exist on type 'RecordingStatus'.
+E:/RE-SON_work_20260827_004629/app/component/business/AudioRecorder/index.tsx(69,20): error TS2345: Argument of type 'string | null' is not assignable to parameter of type 'SetStateAction<undefined>'.
+  Type 'null' is not assignable to type 'SetStateAction<undefined>'.
+E:/RE-SON_work_20260827_004629/app/component/business/AudioRecorder/index.tsx(159,35): error TS7006: Parameter 'pageX' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/business/AudioRecorder/index.tsx(159,42): error TS7006: Parameter 'pageY' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/business/AudioRecorder/index.tsx(159,49): error TS7006: Parameter 'type' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/business/AudioRecorder/index.tsx(168,27): error TS2339: Property 'measure' does not exist on type 'never'.
+E:/RE-SON_work_20260827_004629/app/component/business/AudioRecorder/index.tsx(169,16): error TS7006: Parameter 'x' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/business/AudioRecorder/index.tsx(169,19): error TS7006: Parameter 'y' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/business/AudioRecorder/index.tsx(169,22): error TS7006: Parameter 'width' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/business/AudioRecorder/index.tsx(169,29): error TS7006: Parameter 'height' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/business/AudioRecorder/index.tsx(169,37): error TS7006: Parameter 'pageXElem' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/business/AudioRecorder/index.tsx(169,48): error TS7006: Parameter 'pageYElem' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/business/AudioRecorder/index.tsx(268,36): error TS2345: Argument of type '""' is not assignable to parameter of type 'SetStateAction<undefined>'.
+E:/RE-SON_work_20260827_004629/app/component/business/AudioRecorder/index.tsx(278,36): error TS2345: Argument of type '""' is not assignable to parameter of type 'SetStateAction<undefined>'.
+E:/RE-SON_work_20260827_004629/app/component/business/AudioRecorder/index.tsx(287,19): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '(el: View | null) => View | null' is not assignable to type 'Ref<View> | undefined'.
+      Type '(el: View | null) => View | null' is not assignable to type '(instance: View | null) => void | (() => VoidOrUndefinedOnly)'.
+        Type 'View | null' is not assignable to type 'void | (() => VoidOrUndefinedOnly)'.
+          Type 'null' is not assignable to type 'void | (() => VoidOrUndefinedOnly)'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '(el: View | null) => View | null' is not assignable to type 'Ref<View> | undefined'.
+      Type '(el: View | null) => View | null' is not assignable to type '(instance: View | null) => void | (() => VoidOrUndefinedOnly)'.
+        Type 'View | null' is not assignable to type 'void | (() => VoidOrUndefinedOnly)'.
+          Type 'null' is not assignable to type 'void | (() => VoidOrUndefinedOnly)'.
+E:/RE-SON_work_20260827_004629/app/component/business/AudioRecorder/index.tsx(287,33): error TS2322: Type 'View | null' is not assignable to type 'never'.
+  Type 'null' is not assignable to type 'never'.
+E:/RE-SON_work_20260827_004629/app/component/business/AudioRecorder/index.tsx(303,19): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '(el: View | null) => View | null' is not assignable to type 'Ref<View> | undefined'.
+      Type '(el: View | null) => View | null' is not assignable to type '(instance: View | null) => void | (() => VoidOrUndefinedOnly)'.
+        Type 'View | null' is not assignable to type 'void | (() => VoidOrUndefinedOnly)'.
+          Type 'null' is not assignable to type 'void | (() => VoidOrUndefinedOnly)'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '(el: View | null) => View | null' is not assignable to type 'Ref<View> | undefined'.
+      Type '(el: View | null) => View | null' is not assignable to type '(instance: View | null) => void | (() => VoidOrUndefinedOnly)'.
+        Type 'View | null' is not assignable to type 'void | (() => VoidOrUndefinedOnly)'.
+          Type 'null' is not assignable to type 'void | (() => VoidOrUndefinedOnly)'.
+E:/RE-SON_work_20260827_004629/app/component/business/AudioRecorder/index.tsx(303,33): error TS2322: Type 'View | null' is not assignable to type 'never'.
+  Type 'null' is not assignable to type 'never'.
+E:/RE-SON_work_20260827_004629/app/component/business/individual-payment/index.tsx(69,35): error TS7006: Parameter 'nextAppState' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/business/individual-payment/index.tsx(102,22): error TS2345: Argument of type 'ImageResult' is not assignable to parameter of type 'SetStateAction<null>'.
+  Type 'ImageResult' provides no match for the signature '(prevState: null): null'.
+E:/RE-SON_work_20260827_004629/app/component/business/individual-payment/index.tsx(124,20): error TS2345: Argument of type 'ImageResult' is not assignable to parameter of type 'SetStateAction<null>'.
+  Type 'ImageResult' provides no match for the signature '(prevState: null): null'.
+E:/RE-SON_work_20260827_004629/app/component/business/individual-payment/index.tsx(179,32): error TS2339: Property 'act' does not exist on type 'never'.
+E:/RE-SON_work_20260827_004629/app/component/business/individual-payment/index.tsx(188,32): error TS2339: Property '_id' does not exist on type 'never'.
+E:/RE-SON_work_20260827_004629/app/component/business/individual-payment/index.tsx(200,44): error TS2339: Property 'image' does not exist on type 'never'.
+E:/RE-SON_work_20260827_004629/app/component/business/individual-payment/index.tsx(220,15): error TS2322: Type 'null' is not assignable to type 'number | Value | AnimatedInterpolation<string | number> | WithAnimatedObject<ImageURISource> | WithAnimatedArray<ImageURISource> | undefined'.
+E:/RE-SON_work_20260827_004629/app/component/business/individual-payment/InputKeyboard.tsx(33,24): error TS7006: Parameter 'props' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/business/individual-payment/InputKeyboard.tsx(44,19): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+E:/RE-SON_work_20260827_004629/app/component/business/individual-payment/InputKeyboard.tsx(205,34): error TS2345: Argument of type '[string, { amount: any; type: any; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/component/business/MsgReceiver/component/ImageCard.tsx(4,22): error TS7031: Binding element 'text' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/business/MsgReceiver/component/ImageCard.tsx(4,28): error TS7031: Binding element 'popover' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/business/MsgReceiver/component/LocationCard.tsx(8,25): error TS7031: Binding element 'text' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/business/MsgReceiver/component/LocationCard.tsx(8,31): error TS7031: Binding element 'popover' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/business/MsgReceiver/component/LocationCard.tsx(55,30): error TS2345: Argument of type '[string, { routeType: string; coordinates: any; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/component/business/MsgReceiver/component/RealTimeLocationCard.tsx(7,33): error TS7031: Binding element 'msgId' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/business/MsgReceiver/component/RealTimeLocationCard.tsx(20,11): error TS2345: Argument of type '[string, { messageIdForRoom: any; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/component/business/MsgReceiver/component/TransferCard.tsx(14,3): error TS7031: Binding element 'transId' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/business/MsgReceiver/component/TransferCard.tsx(15,3): error TS7031: Binding element 'onLongPress' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/business/MsgReceiver/component/TransferCard.tsx(16,3): error TS7031: Binding element 'accepted' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/business/MsgReceiver/component/TransferCard.tsx(17,3): error TS7031: Binding element 'msgSenderId' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/business/MsgReceiver/component/TransferCard.tsx(18,3): error TS7031: Binding element 'amount' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/business/MsgReceiver/component/TransferCard.tsx(19,3): error TS7031: Binding element 'type' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/business/MsgReceiver/component/TransferCard.tsx(20,3): error TS7031: Binding element 'originMsgId' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/business/MsgReceiver/component/TransferCard.tsx(57,28): error TS2345: Argument of type '[string, { transId: any; msgSenderId: any; originMsgId: any; amount: any; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/component/business/MsgReceiver/index.tsx(97,28): error TS7031: Binding element 'children' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/business/PayDone/index.tsx(75,32): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"(tabs)"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/component/business/PayDone/index.tsx(91,34): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/chats/msg-chats/index"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/component/complex/AcceptBtn/index.tsx(17,3): error TS2339: Property 'height' does not exist on type '{ type?: string | undefined; text?: string | undefined; } & TouchableOpacityProps'.
+E:/RE-SON_work_20260827_004629/app/component/complex/AcceptBtn/index.tsx(18,3): error TS2339: Property 'width' does not exist on type '{ type?: string | undefined; text?: string | undefined; } & TouchableOpacityProps'.
+E:/RE-SON_work_20260827_004629/app/component/complex/AcceptBtn/index.tsx(19,3): error TS2339: Property 'sizeOut' does not exist on type '{ type?: string | undefined; text?: string | undefined; } & TouchableOpacityProps'.
+E:/RE-SON_work_20260827_004629/app/component/complex/AmountText/index.tsx(7,23): error TS7031: Binding element 'amount' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/complex/Divider/index.tsx(4,18): error TS7006: Parameter 'props' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/complex/HangUpBtn/index.tsx(17,3): error TS2339: Property 'height' does not exist on type '{ type?: string | undefined; text?: string | undefined; } & TouchableOpacityProps'.
+E:/RE-SON_work_20260827_004629/app/component/complex/HangUpBtn/index.tsx(18,3): error TS2339: Property 'width' does not exist on type '{ type?: string | undefined; text?: string | undefined; } & TouchableOpacityProps'.
+E:/RE-SON_work_20260827_004629/app/component/complex/HangUpBtn/index.tsx(19,3): error TS2339: Property 'sizeOut' does not exist on type '{ type?: string | undefined; text?: string | undefined; } & TouchableOpacityProps'.
+E:/RE-SON_work_20260827_004629/app/component/complex/ItemCard/index.tsx(6,3): error TS2724: '"react-native"' has no exported member named 'TouchableOpacityBase'. Did you mean 'TouchableOpacity'?
+E:/RE-SON_work_20260827_004629/app/component/complex/PhoneCalling/index.tsx(120,25): error TS2339: Property 'nickname' does not exist on type '{ act: string; image: string; }'.
+E:/RE-SON_work_20260827_004629/app/component/complex/PhoneCalling/index.tsx(138,11): error TS2322: Type '{ width: number; height: number; sizeOut: number; onPress: () => void; }' is not assignable to type 'IntrinsicAttributes & { type?: string | undefined; text?: string | undefined; } & TouchableOpacityProps'.
+  Property 'width' does not exist on type 'IntrinsicAttributes & { type?: string | undefined; text?: string | undefined; } & TouchableOpacityProps'.
+E:/RE-SON_work_20260827_004629/app/component/complex/PhoneCalling/index.tsx(147,11): error TS2322: Type '{ width: number; height: number; sizeOut: number; onPress: () => void; }' is not assignable to type 'IntrinsicAttributes & { type?: string | undefined; text?: string | undefined; } & TouchableOpacityProps'.
+  Property 'width' does not exist on type 'IntrinsicAttributes & { type?: string | undefined; text?: string | undefined; } & TouchableOpacityProps'.
+E:/RE-SON_work_20260827_004629/app/component/complex/RedDot/index.tsx(4,17): error TS7006: Parameter 'props' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/component/complex/UserAvatar/index.tsx(26,19): error TS2339: Property 'uri' does not exist on type 'ImageURISource | ImageURISource[]'.
+  Property 'uri' does not exist on type 'ImageURISource[]'.
+E:/RE-SON_work_20260827_004629/app/component/complex/UserAvatar/index.tsx(27,55): error TS2339: Property 'uri' does not exist on type 'ImageURISource | ImageURISource[]'.
+  Property 'uri' does not exist on type 'ImageURISource[]'.
+E:/RE-SON_work_20260827_004629/app/component/complex/UserAvatar/index.tsx(49,6): error TS2769: No overload matches this call.
+  Overload 2 of 2, '(props: FastImageProps): string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | ... 4 more ... | undefined', gave the following error.
+    Type 'ImageSourcePropType | undefined' is not assignable to type 'number | Source | undefined'.
+      Type 'ImageURISource' is not assignable to type 'number | Source | undefined'.
+        Type 'ImageURISource' is not assignable to type 'Source'.
+          Types of property 'cache' are incompatible.
+            Type '"default" | "reload" | "force-cache" | "only-if-cached" | undefined' is not assignable to type 'Cache | undefined'.
+              Type '"default"' is not assignable to type 'Cache | undefined'.
+  Overload 2 of 2, '(props: FastImageProps): string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | ... 4 more ... | undefined', gave the following error.
+    Type 'StyleProp<ImageStyle>' is not assignable to type 'Falsy | ImageStyle | RecursiveArray<Falsy | ImageStyle> | readonly (Falsy | ImageStyle)[]'.
+      Type 'ImageStyle' is not assignable to type 'Falsy | ImageStyle | RecursiveArray<Falsy | ImageStyle> | readonly (Falsy | ImageStyle)[]'.
+        Type 'import("E:/RE-SON_work_20260827_004629/node_modules/react-native/Libraries/StyleSheet/StyleSheetTypes").ImageStyle' is not assignable to type 'import("E:/RE-SON_work_20260827_004629/node_modules/react-native-fast-image/dist/index").ImageStyle'.
+          Types of property 'borderBottomLeftRadius' are incompatible.
+            Type 'string | AnimatableNumericValue | undefined' is not assignable to type 'number | undefined'.
+              Type 'string' is not assignable to type 'number'.
+E:/RE-SON_work_20260827_004629/app/hooks/useLazyRef.ts(4,25): error TS2554: Expected 1 arguments, but got 0.
+E:/RE-SON_work_20260827_004629/app/hooks/useMemoizedFn.ts(26,22): error TS2554: Expected 1 arguments, but got 0.
+E:/RE-SON_work_20260827_004629/app/hooks/usePusherProvider.tsx(15,34): error TS7031: Binding element 'children' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/hooks/useRefState.ts(13,5): error TS7006: Parameter 'patch' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/hooks/useScrollTo.ts(102,5): error TS2322: Type 'RefObject<T | null>' is not assignable to type 'RefObject<T>'.
+  Type 'T | null' is not assignable to type 'T'.
+    'T' could be instantiated with an arbitrary type which could be unrelated to 'T | null'.
+E:/RE-SON_work_20260827_004629/app/hooks/useSetState.ts(13,37): error TS7006: Parameter 'patch' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/pages/chats/component/ChatList.tsx(103,25): error TS2345: Argument of type '[string, { chatType: string; convoId: any; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/index.tsx(41,25): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/contacts/screens/add-contacts/index"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/index.tsx(71,29): error TS2345: Argument of type '[string, { answer: boolean; to: string; from: string; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/index.tsx(159,29): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/chats/screens/create-group/index"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/component/ChatInput.tsx(20,5): error TS7031: Binding element 'value' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/component/ChatInput.tsx(21,5): error TS7031: Binding element 'onEndEditing' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/component/ChatInput.tsx(22,5): error TS7031: Binding element 'onVoiceEnd' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/component/ChatInput.tsx(23,5): error TS7031: Binding element 'onChangeText' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/component/ChatInput.tsx(24,5): error TS7031: Binding element 'chatPress' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/component/ChatInput.tsx(25,5): error TS7031: Binding element 'onFocus' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/component/ChatInput.tsx(26,5): error TS7031: Binding element 'emojiPress' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/component/ChatInput.tsx(27,5): error TS7031: Binding element 'plusPress' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/component/ChatInput.tsx(29,3): error TS7006: Parameter 'ref' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/component/ChatList.tsx(202,27): error TS2345: Argument of type '[string, { friendId: string; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/component/ChatList.tsx(510,38): error TS2551: Property 'images' does not exist on type 'LocalMsg'. Did you mean 'image'?
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/component/ChatList.tsx(513,35): error TS2551: Property 'images' does not exist on type 'LocalMsg'. Did you mean 'image'?
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/component/ChatList.tsx(514,38): error TS2551: Property 'images' does not exist on type 'LocalMsg'. Did you mean 'image'?
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/component/ChatList.tsx(515,25): error TS2322: Type 'boolean | "" | undefined' is not assignable to type 'boolean | undefined'.
+  Type '""' is not assignable to type 'boolean | undefined'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/component/ChatList.tsx(566,38): error TS2551: Property 'images' does not exist on type 'LocalMsg'. Did you mean 'image'?
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/component/ChatList.tsx(569,35): error TS2551: Property 'images' does not exist on type 'LocalMsg'. Did you mean 'image'?
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/component/ChatList.tsx(570,38): error TS2551: Property 'images' does not exist on type 'LocalMsg'. Did you mean 'image'?
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/component/ChatList.tsx(571,25): error TS2322: Type 'boolean | "" | undefined' is not assignable to type 'boolean | undefined'.
+  Type '""' is not assignable to type 'boolean | undefined'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/component/ChatList.tsx(606,38): error TS2551: Property 'images' does not exist on type 'LocalMsg'. Did you mean 'image'?
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/component/ChatList.tsx(609,35): error TS2551: Property 'images' does not exist on type 'LocalMsg'. Did you mean 'image'?
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/component/ChatList.tsx(610,38): error TS2551: Property 'images' does not exist on type 'LocalMsg'. Did you mean 'image'?
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/component/ChatList.tsx(611,25): error TS2322: Type 'boolean | "" | undefined' is not assignable to type 'boolean | undefined'.
+  Type '""' is not assignable to type 'boolean | undefined'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/component/MemberList.tsx(8,23): error TS7031: Binding element 'memberListVisible' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/component/MemberList.tsx(8,42): error TS7031: Binding element 'onClose' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/index.tsx(92,23): error TS2554: Expected 1 arguments, but got 0.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/index.tsx(276,27): error TS7006: Parameter 'toValue' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/index.tsx(346,31): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/chats/screens/chat-info/index"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/index.tsx(534,9): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: KeyboardAvoidingViewProps): KeyboardAvoidingView', gave the following error.
+    Type '"" | "padding"' is not assignable to type '"padding" | "height" | "position" | undefined'.
+      Type '""' is not assignable to type '"padding" | "height" | "position" | undefined'.
+  Overload 2 of 2, '(props: KeyboardAvoidingViewProps, context: any): KeyboardAvoidingView', gave the following error.
+    Type '"" | "padding"' is not assignable to type '"padding" | "height" | "position" | undefined'.
+      Type '""' is not assignable to type '"padding" | "height" | "position" | undefined'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/index.tsx(567,13): error TS2322: Type '{ messages: LocalMsg[]; loaded: boolean; isAITyping: boolean; aiAvatar: any; aiAvatarName: any; panelOpen: boolean; expandedVoiceId: string | null; onMsgLongPress: (m: LocalMsg, x: number, y: number) => void; ... 5 more ...; onPress: () => void; }' is not assignable to type 'IntrinsicAttributes & { messages: LocalMsg[]; loaded?: boolean | undefined; isAITyping: boolean; aiAvatar?: string | undefined; aiAvatarName?: string | undefined; ... 7 more ...; expandedVoiceId?: string | ... 1 more ... | undefined; }'.
+  Property 'onPress' does not exist on type 'IntrinsicAttributes & { messages: LocalMsg[]; loaded?: boolean | undefined; isAITyping: boolean; aiAvatar?: string | undefined; aiAvatarName?: string | undefined; ... 7 more ...; expandedVoiceId?: string | ... 1 more ... | undefined; }'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/index.tsx(650,30): error TS7006: Parameter 'uri' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/index.tsx(685,35): error TS2339: Property 'setVoiceInput' does not exist on type 'TextInput'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/index.tsx(695,13): error TS2322: Type 'Value' is not assignable to type 'number'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/index.tsx(696,13): error TS2322: Type '({ type, val }: { type: string; val: any; }) => void' is not assignable to type '(data: { type: string; val?: any; }) => void'.
+  Types of parameters '__0' and 'data' are incompatible.
+    Type '{ type: string; val?: any; }' is not assignable to type '{ type: string; val: any; }'.
+      Property 'val' is optional in type '{ type: string; val?: any; }' but required in type '{ type: string; val: any; }'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/screens/camera/index.tsx(23,28): error TS2749: 'Camera' refers to a value, but is being used as a type here. Did you mean 'typeof Camera'?
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/screens/camera/index.tsx(94,33): error TS7031: Binding element 'children' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/screens/camera/index.tsx(94,43): error TS7031: Binding element 'sendHandler' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/screens/camera/index.tsx(192,17): error TS2345: Argument of type '[string, { uploadedImgs: { uri: string; type: "video" | "image" | "audio/mpeg"; name: string; }[]; type: string; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/screens/camera/index.tsx(202,15): error TS2322: Type '{ uri: string; type: "video" | "image" | "audio/mpeg"; name: string; }' is not assignable to type 'string'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/screens/camera/index.tsx(237,19): error TS2345: Argument of type '[string, { uploadedImgs: { uri: string; type: "video" | "image" | "audio/mpeg"; name: string; }[]; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/screens/camera/index.tsx(246,15): error TS2322: Type '{ uri: string; type: "video" | "image" | "audio/mpeg"; name: string; }' is not assignable to type 'string'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/screens/camera/index.tsx(261,13): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: VideoViewProps): VideoView', gave the following error.
+    Type '{ player: VideoPlayer; style: { width: "100%"; height: "80%"; }; contentFit: "contain"; nativeControls: true; allowsFullscreen: true; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<VideoView> & Readonly<VideoViewProps>'.
+      Property 'allowsFullscreen' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<VideoView> & Readonly<VideoViewProps>'.
+  Overload 2 of 2, '(props: VideoViewProps, context: any): VideoView', gave the following error.
+    Type '{ player: VideoPlayer; style: { width: "100%"; height: "80%"; }; contentFit: "contain"; nativeControls: true; allowsFullscreen: true; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<VideoView> & Readonly<VideoViewProps>'.
+      Property 'allowsFullscreen' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<VideoView> & Readonly<VideoViewProps>'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/screens/camera/index.tsx(285,10): error TS2604: JSX element type 'Camera' does not have any construct or call signatures.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/screens/camera/index.tsx(285,10): error TS2786: 'Camera' cannot be used as a JSX component.
+  Its type '{ getCameraPermissionsAsync: () => Promise<PermissionResponse>; requestCameraPermissionsAsync: () => Promise<PermissionResponse>; getMicrophonePermissionsAsync: () => Promise<...>; requestMicrophonePermissionsAsync: () => Promise<...>; scanFromURLAsync: (url: string, barcodeTypes?: BarcodeType[] | undefined) => Prom...' is not a valid JSX element type.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/screens/real-time-location/index.tsx(70,22): error TS2554: Expected 1 arguments, but got 0.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/screens/real-time-location/index.tsx(112,27): error TS2345: Argument of type 'TUserListInRoomData' is not assignable to parameter of type 'SetStateAction<TUserListInRoomData[] | undefined>'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/screens/real-time-location/index.tsx(216,17): error TS2322: Type 'string' is not assignable to type 'number'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/screens/real-time-location/index.tsx(225,17): error TS2322: Type 'string' is not assignable to type 'number'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/screens/real-time-location/index.tsx(251,9): error TS2322: Type '{ latitudeDelta: number; longitudeDelta: number; longitude: number | undefined; latitude: number | undefined; }' is not assignable to type 'Region'.
+  Type '{ latitudeDelta: number; longitudeDelta: number; longitude: number | undefined; latitude: number | undefined; }' is not assignable to type 'LatLng'.
+    Types of property 'latitude' are incompatible.
+      Type 'number | undefined' is not assignable to type 'number'.
+        Type 'undefined' is not assignable to type 'number'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/screens/real-time-location/index.tsx(265,62): error TS2339: Property 'coords' does not exist on type 'number[]'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/msg-chats/screens/real-time-location/index.tsx(276,17): error TS2322: Type '{ defaultSource: any; rounded: true; source: { uri: string; }; }' is not assignable to type 'IntrinsicAttributes & { source?: ImageSourcePropType | undefined; rounded?: boolean | undefined; style?: StyleProp<ImageStyle>; }'.
+  Property 'defaultSource' does not exist on type 'IntrinsicAttributes & { source?: ImageSourcePropType | undefined; rounded?: boolean | undefined; style?: StyleProp<ImageStyle>; }'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/screens/chat-info/index.tsx(104,25): error TS2345: Argument of type '[string, { friendId: string; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/screens/chat-info/index.tsx(269,19): error TS2345: Argument of type '[string, { friendId: string; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/screens/chat-info/index.tsx(470,35): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/chats/screens/chat-info/memory"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/screens/chat-info/index.tsx(478,21): error TS2345: Argument of type '[string, { friendId: string; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/screens/chat-info/index.tsx(488,37): error TS2345: Argument of type '[string, { roleId: string; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/screens/chat-info/memory.tsx(25,42): error TS2339: Property 'roleId' does not exist on type '{ convoMember: IUser[]; convoId: string; curReceiverInfo?: IUser | undefined; groupName?: string | undefined; memberNames?: string[] | undefined; memberInfos?: any[] | undefined; title?: string | undefined; roleName?: string | undefined; }'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/screens/create-group/index.tsx(141,23): error TS2345: Argument of type '[string, { chatType: string; convoId: string; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/screens/create-group/index.tsx(288,11): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: FlatListProps<Row>): FlatList<Row>', gave the following error.
+    Type '(_data: Row[] | null, index: number) => { length: number; offset: number; index: number; }' is not assignable to type '(data: ArrayLike<Row> | null | undefined, index: number) => { length: number; offset: number; index: number; }'.
+      Types of parameters '_data' and 'data' are incompatible.
+        Type 'ArrayLike<Row> | null | undefined' is not assignable to type 'Row[] | null'.
+          Type 'undefined' is not assignable to type 'Row[] | null'.
+  Overload 2 of 2, '(props: FlatListProps<Row>, context: any): FlatList<Row>', gave the following error.
+    Type '(_data: Row[] | null, index: number) => { length: number; offset: number; index: number; }' is not assignable to type '(data: ArrayLike<Row> | null | undefined, index: number) => { length: number; offset: number; index: number; }'.
+      Types of parameters '_data' and 'data' are incompatible.
+        Type 'ArrayLike<Row> | null | undefined' is not assignable to type 'Row[] | null'.
+          Type 'undefined' is not assignable to type 'Row[] | null'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/screens/money-qrcode/index.tsx(19,19): error TS2554: Expected 1 arguments, but got 0.
+E:/RE-SON_work_20260827_004629/app/pages/chats/screens/money-qrcode/index.tsx(40,9): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type 'RefObject<unknown>' is not assignable to type 'Ref<View> | undefined'.
+      Type 'RefObject<unknown>' is not assignable to type 'RefObject<View | null>'.
+        Type 'unknown' is not assignable to type 'View | null'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type 'RefObject<unknown>' is not assignable to type 'Ref<View> | undefined'.
+      Type 'RefObject<unknown>' is not assignable to type 'RefObject<View | null>'.
+        Type 'unknown' is not assignable to type 'View | null'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/screens/money-qrcode/index.tsx(57,13): error TS2322: Type '{ type: string; }' is not assignable to type 'IntrinsicAttributes & { value: string; size?: number | undefined; color?: string | undefined; logo?: string | undefined; centerImage?: any; centerText?: string | undefined; centerColor?: string | undefined; style?: StyleProp<...>; }'.
+  Property 'type' does not exist on type 'IntrinsicAttributes & { value: string; size?: number | undefined; color?: string | undefined; logo?: string | undefined; centerImage?: any; centerText?: string | undefined; centerColor?: string | undefined; style?: StyleProp<...>; }'.
+E:/RE-SON_work_20260827_004629/app/pages/chats/screens/transfer-receive/index.tsx(153,23): error TS7031: Binding element 'children' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/pages/chats/screens/transfer-receive/index.tsx(166,23): error TS7031: Binding element 'children' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/pages/chats/screens/transfer-receive/index.tsx(171,28): error TS7031: Binding element 'children' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/pages/contacts/index.tsx(33,25): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/contacts/screens/add-contacts/index"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/contacts/index.tsx(112,23): error TS2345: Argument of type '[string, { chatType: string; convoId: string; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/contacts/index.tsx(147,27): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/contacts/screens/group-chats/index"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/contacts/index.tsx(249,19): error TS2345: Argument of type '[string, { friendId: string; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/contacts/index.tsx(283,29): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/chats/screens/create-group/index"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/contacts/screens/add-contacts-search/index.tsx(141,35): error TS2345: Argument of type '[string, { friendId: string; type: string; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/contacts/screens/add-contacts/index.tsx(35,29): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/contacts/screens/add-contacts-search/index"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/contacts/screens/friend-info/index.tsx(84,21): error TS2345: Argument of type '[string, { friendId: string | undefined; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/contacts/screens/friend-info/index.tsx(133,23): error TS2345: Argument of type '[string, { chatType: string; convoId: string; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/contacts/screens/friend-info/index.tsx(276,31): error TS2345: Argument of type '[string, { friendId: string; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/contacts/screens/friend-info/index.tsx(333,31): error TS2345: Argument of type '[string, { friendId: string; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/contacts/screens/friend-info/settings.tsx(150,39): error TS2353: Object literal may only specify known properties, and 'starred' does not exist in type 'Partial<Pick<Role, "background" | "region" | "name" | "temperature" | "voice" | "avatar" | "remark" | "persona" | "greeting" | "callName" | "patReply" | "storyState" | "bio" | "examples" | "contextRounds" | "modelIds">>'.
+E:/RE-SON_work_20260827_004629/app/pages/contacts/screens/group-chats/index.tsx(67,23): error TS2345: Argument of type '[string, { chatType: string; convoId: any; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/contacts/screens/new-friends/index.tsx(39,7): error TS2353: Object literal may only specify known properties, and 'headerTitleAlign' does not exist in type '{ title?: string | undefined; rightComp: () => ReactNode; goBackColor?: string | undefined; goBackHandler?: (() => void) | undefined; rightHandler?: (() => void) | undefined; }'.
+E:/RE-SON_work_20260827_004629/app/pages/contacts/screens/new-friends/index.tsx(45,27): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/contacts/screens/add-contacts/index"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/contacts/screens/new-friends/index.tsx(56,17): error TS2339: Property 'code' does not exist on type '{}'.
+E:/RE-SON_work_20260827_004629/app/pages/contacts/screens/new-friends/index.tsx(57,20): error TS2339: Property 'data' does not exist on type '{}'.
+E:/RE-SON_work_20260827_004629/app/pages/contacts/screens/new-friends/index.tsx(58,36): error TS2339: Property 'data' does not exist on type '{}'.
+E:/RE-SON_work_20260827_004629/app/pages/contacts/screens/new-friends/index.tsx(60,26): error TS2339: Property 'data' does not exist on type '{}'.
+E:/RE-SON_work_20260827_004629/app/pages/contacts/screens/new-friends/index.tsx(78,29): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/contacts/screens/add-contacts-search/index"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/contacts/screens/new-friends/index.tsx(101,35): error TS2345: Argument of type '[string, { status: never; confirm: never; friendId: any; type: string; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/contacts/screens/new-friends/index.tsx(104,34): error TS2339: Property '_id' does not exist on type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/contacts/screens/new-friends/index.tsx(118,29): error TS2339: Property 'act' does not exist on type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/contacts/screens/new-friends/index.tsx(132,57): error TS2339: Property 'image' does not exist on type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/contacts/screens/new-friends/index.tsx(146,23): error TS2820: Type '"arrowright"' is not assignable to type '"number" | "function" | "translation" | "key" | "audio" | "code" | "form" | "link" | "menu" | "picture" | "ruby" | "search" | "select" | "table" | "android" | "windows" | "warning" | ... 432 more ... | undefined'. Did you mean '"arrow-right"'?
+E:/RE-SON_work_20260827_004629/app/pages/discover/index.tsx(46,26): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/contacts/screens/add-contacts/index"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/discover/index.tsx(75,28): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/discover/moments/index"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/discover/index.tsx(210,30): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/chats/screens/create-group/index"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/discover/moments/index.tsx(153,17): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/discover/moments/screens/post-moments/index"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/discover/screens/nearBy/index.tsx(42,31): error TS7031: Binding element 'longitude' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/pages/discover/screens/nearBy/index.tsx(42,42): error TS7031: Binding element 'latitude' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/pages/discover/screens/nearBy/index.tsx(45,19): error TS2345: Argument of type '"Permission to access location was denied"' is not assignable to parameter of type 'SetStateAction<null>'.
+E:/RE-SON_work_20260827_004629/app/pages/discover/screens/nearBy/index.tsx(50,17): error TS2345: Argument of type 'LocationObject' is not assignable to parameter of type 'SetStateAction<null>'.
+  Type 'LocationObject' provides no match for the signature '(prevState: null): null'.
+E:/RE-SON_work_20260827_004629/app/pages/discover/screens/nearBy/index.tsx(143,34): error TS2339: Property 'length' does not exist on type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/discover/screens/nearBy/index.tsx(155,11): error TS2322: Type 'number | undefined' is not assignable to type 'number'.
+  Type 'undefined' is not assignable to type 'number'.
+E:/RE-SON_work_20260827_004629/app/pages/discover/screens/nearBy/index.tsx(156,11): error TS2322: Type 'number | undefined' is not assignable to type 'number'.
+  Type 'undefined' is not assignable to type 'number'.
+E:/RE-SON_work_20260827_004629/app/pages/discover/screens/nearBy/index.tsx(181,29): error TS2345: Argument of type 'null' is not assignable to parameter of type 'SetStateAction<undefined>'.
+E:/RE-SON_work_20260827_004629/app/pages/discover/screens/nearBy/index.tsx(191,25): error TS2698: Spread types may only be created from object types.
+E:/RE-SON_work_20260827_004629/app/pages/discover/screens/nearBy/index.tsx(228,24): error TS2339: Property 'map' does not exist on type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/discover/screens/nearBy/index.tsx(228,29): error TS7006: Parameter 'item' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/pages/discover/screens/nearBy/index.tsx(256,40): error TS2339: Property 'map' does not exist on type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/discover/screens/nearBy/index.tsx(256,45): error TS7006: Parameter 'item' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/pages/discover/screens/nearBy/index.tsx(258,32): error TS7006: Parameter 'onlineUserItem' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/app/pages/map/src/App.tsx(199,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/AnimatedMarkers.tsx(89,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/AnimatedMarkers.tsx(94,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/AnimatedNavigation.tsx(54,11): error TS2322: Type '(el: MapView | null) => MapView | null' is not assignable to type 'Ref<MapView> | undefined'.
+  Type '(el: MapView | null) => MapView | null' is not assignable to type '(instance: MapView | null) => void | (() => VoidOrUndefinedOnly)'.
+    Type 'MapView | null' is not assignable to type 'void | (() => VoidOrUndefinedOnly)'.
+      Type 'null' is not assignable to type 'void | (() => VoidOrUndefinedOnly)'.
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/AnimatedNavigation.tsx(103,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/AnimatedNavigation.tsx(108,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/AnimatedViews.tsx(386,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/AnimatedViews.tsx(399,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/BugMarkerWontUpdate.tsx(93,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/BugMarkerWontUpdate.tsx(98,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/Callouts.tsx(165,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/Callouts.tsx(170,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/CameraControl.tsx(81,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/CameraControl.tsx(86,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/CustomMarkers.tsx(82,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/CustomMarkers.tsx(87,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/CustomOverlay.tsx(67,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/CustomOverlay.tsx(72,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/DefaultMarkers.tsx(84,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/DefaultMarkers.tsx(89,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/DisplayLatLng.tsx(133,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/DisplayLatLng.tsx(138,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/DraggableMarkers.tsx(75,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/DraggableMarkers.tsx(80,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/EventListener.tsx(173,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/FitToCoordinates.tsx(114,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/FitToCoordinates.tsx(119,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/FitToSuppliedMarkers.tsx(124,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/FitToSuppliedMarkers.tsx(129,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/Geojson.tsx(19,34): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/GradientPolylines.tsx(65,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/ImageOverlayWithAssets.tsx(56,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/ImageOverlayWithAssets.tsx(61,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/ImageOverlayWithBearing.tsx(75,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/ImageOverlayWithBearing.tsx(80,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/ImageOverlayWithURL.tsx(73,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/ImageOverlayWithURL.tsx(78,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/IndoorMap.tsx(69,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/IndoorMap.tsx(74,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/LegalLabel.tsx(57,35): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/LiteMapView.tsx(35,37): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/LoadingMap.tsx(75,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/LoadingMap.tsx(80,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/MapBoundaries.tsx(60,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/MapBoundaries.tsx(65,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/MapStyle.tsx(204,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/MapStyle.tsx(209,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/MarkerTypes.tsx(77,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/MarkerTypes.tsx(82,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/MassiveCustomMarkers.tsx(95,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/MassiveCustomMarkers.tsx(100,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/OnPoiClick.tsx(65,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/OnPoiClick.tsx(70,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/Overlays.tsx(109,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/Overlays.tsx(114,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/PolygonCreator.tsx(171,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/PolygonCreator.tsx(176,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/PolylineCreator.tsx(108,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/PolylineCreator.tsx(113,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/SetNativePropsOverlays.tsx(154,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/SetNativePropsOverlays.tsx(159,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/StaticMap.tsx(92,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/TakeSnapshot.tsx(111,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/TakeSnapshot.tsx(116,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/TestIdMarkers.tsx(61,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/TestIdMarkers.tsx(66,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/ThemeMap.tsx(88,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/ViewsAsMarkers.tsx(77,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/ViewsAsMarkers.tsx(82,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/ZIndexMarkers.tsx(78,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/map/src/examples/ZIndexMarkers.tsx(83,19): error TS2551: Property 'absoluteFillObject' does not exist on type 'typeof StyleSheet'. Did you mean 'absoluteFill'?
+E:/RE-SON_work_20260827_004629/app/pages/me/components/SimpleLogin.tsx(81,23): error TS2339: Property 'user' does not exist on type 'SignInResponse'.
+  Property 'user' does not exist on type 'SignInSuccessResponse'.
+E:/RE-SON_work_20260827_004629/app/pages/me/components/SimpleLogin.tsx(82,25): error TS2339: Property 'user' does not exist on type 'SignInResponse'.
+  Property 'user' does not exist on type 'SignInSuccessResponse'.
+E:/RE-SON_work_20260827_004629/app/pages/me/components/SimpleLogin.tsx(83,27): error TS2339: Property 'user' does not exist on type 'SignInResponse'.
+  Property 'user' does not exist on type 'SignInSuccessResponse'.
+E:/RE-SON_work_20260827_004629/app/pages/me/components/SimpleLogin.tsx(97,21): error TS2339: Property 'user' does not exist on type 'SignInResponse'.
+  Property 'user' does not exist on type 'SignInSuccessResponse'.
+E:/RE-SON_work_20260827_004629/app/pages/me/components/SimpleLogin.tsx(99,23): error TS2353: Object literal may only specify known properties, and 'userInfo' does not exist in type '(prevState: undefined) => undefined'.
+E:/RE-SON_work_20260827_004629/app/pages/me/components/SimpleLogin.tsx(100,20): error TS2345: Argument of type 'AxiosResponse<any, any>' is not assignable to parameter of type 'IUser | ((currVal: IUser) => IUser)'.
+E:/RE-SON_work_20260827_004629/app/pages/me/components/SimpleLogin.tsx(117,23): error TS2353: Object literal may only specify known properties, and 'user' does not exist in type '(prevState: undefined) => undefined'.
+E:/RE-SON_work_20260827_004629/app/pages/me/components/SimpleLogin.tsx(146,20): error TS2345: Argument of type '(prev: IUser) => { userInfo: {}; token?: string | undefined; refreshToken?: string | undefined; }' is not assignable to parameter of type 'IUser | ((currVal: IUser) => IUser)'.
+  Type '(prev: IUser) => { userInfo: {}; token?: string | undefined; refreshToken?: string | undefined; }' is not assignable to type '(currVal: IUser) => IUser'.
+    Call signature return types '{ userInfo: {}; token?: string | undefined; refreshToken?: string | undefined; }' and 'IUser' are incompatible.
+      The types of 'userInfo' are incompatible between these types.
+        Type '{}' is missing the following properties from type '{ bio: string; gender: "male" | "female"; act: string; wechatId: string; mail: string; psw: string; _id: string; image: string; location: { type: string; coordinates: number[]; }; }': bio, gender, act, wechatId, and 5 more.
+E:/RE-SON_work_20260827_004629/app/pages/me/index.tsx(123,38): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/me/screens/my-qrcode/index"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/me/index.tsx(144,38): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/me/screens/profile/index"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/me/index.tsx(156,38): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/me/screens/status/index"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/me/index.tsx(210,40): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/me/screens/favorites/index"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/me/index.tsx(232,34): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/me/setting/index"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/me/screens/about/index.tsx(49,24): error TS2345: Argument of type '[string, { type: string; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/me/screens/about/index.tsx(165,34): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/me/screens/about/changelog"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/me/screens/director/index.tsx(144,25): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/contacts/screens/add-contacts/index"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/me/screens/director/index.tsx(222,23): error TS2345: Argument of type '[string, { friendId: any; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/me/screens/kb/create.tsx(54,25): error TS2345: Argument of type '[string, { kbId: string; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/me/screens/kb/index.tsx(50,44): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/me/screens/kb/create"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/me/screens/kb/index.tsx(83,31): error TS2345: Argument of type '[string, { kbId: string; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/me/screens/lading/index.tsx(28,13): error TS2322: Type '{ children: string; onLongPress: () => void; onPress: () => void; type: "primary"; }' is not assignable to type 'IntrinsicAttributes & ButtonProps'.
+  Property 'onLongPress' does not exist on type 'IntrinsicAttributes & ButtonProps'.
+E:/RE-SON_work_20260827_004629/app/pages/me/screens/model-manage/index.tsx(101,35): error TS2345: Argument of type '[string, { providerId: string; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/me/screens/model-manage/index.tsx(162,29): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/me/screens/model-manage/provider"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/me/screens/profile/index.tsx(183,44): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/me/screens/my-qrcode/index"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/me/screens/rag/index.tsx(308,42): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/me/screens/rag/models"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/me/screens/rag/models.tsx(70,31): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/me/screens/rag/model-form"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/me/screens/rag/models.tsx(106,29): error TS2345: Argument of type '[string, { fresh: string; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/me/screens/roles/detail.tsx(64,19): error TS2339: Property 'work' does not exist on type 'Role'.
+E:/RE-SON_work_20260827_004629/app/pages/me/screens/roles/edit.tsx(287,24): error TS2345: Argument of type '{ name: string; bio: string; persona: string; callName: string; patReply: string; region: string; avatar: string; temperature: number; contextRounds: number; background: RoleBackgroundItem[]; storyState: string; voice: RoleVoice | undefined; }' is not assignable to parameter of type 'Omit<Role, "id" | "status" | "isSystem">'.
+  Property 'greeting' is missing in type '{ name: string; bio: string; persona: string; callName: string; patReply: string; region: string; avatar: string; temperature: number; contextRounds: number; background: RoleBackgroundItem[]; storyState: string; voice: RoleVoice | undefined; }' but required in type 'Omit<Role, "id" | "status" | "isSystem">'.
+E:/RE-SON_work_20260827_004629/app/pages/me/screens/roles/edit.tsx(401,29): error TS2345: Argument of type '[string, { roleId: string; initial: string; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/me/screens/roles/edit.tsx(423,31): error TS2345: Argument of type '[string, { roleId: string | undefined; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/me/screens/roles/edit.tsx(578,31): error TS2345: Argument of type '[string, { roleId: string; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/me/screens/roles/edit.tsx(602,31): error TS2345: Argument of type '[string, { roleId: string; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/me/screens/roles/index.tsx(177,25): error TS2345: Argument of type '[string, { roleId: string; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/me/screens/roles/index.tsx(190,23): error TS2345: Argument of type '[string, { roleId: string; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/me/screens/roles/index.tsx(270,48): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type '"pages/me/screens/roles/edit"' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/me/screens/status/index.tsx(111,23): error TS2345: Argument of type '[string, { chatType: string; convoId: string; }]' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/pages/me/setting/index.tsx(379,57): error TS2769: No overload matches this call.
+  Argument of type '[string]' is not assignable to parameter of type 'never'.
+  Overload 2 of 2, '(options: never): void', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'never'.
+E:/RE-SON_work_20260827_004629/app/store/localChat.ts(773,57): error TS2345: Argument of type '{ role: string; content: string; }[]' is not assignable to parameter of type 'ChatMessage[]'.
+  Type '{ role: string; content: string; }' is not assignable to type 'ChatMessage'.
+    Types of property 'role' are incompatible.
+      Type 'string' is not assignable to type '"system" | "user" | "assistant" | "tool"'.
+E:/RE-SON_work_20260827_004629/app/store/localChat.ts(863,37): error TS2345: Argument of type '{ id: string; content: string; createdAt: number; pinned?: boolean | undefined; }[]' is not assignable to parameter of type 'MemoryEntry[]'.
+  Type '{ id: string; content: string; createdAt: number; pinned?: boolean | undefined; }' is missing the following properties from type 'MemoryEntry': roleId, source
+E:/RE-SON_work_20260827_004629/app/store/localChat.ts(876,41): error TS2345: Argument of type '{ role: string; content: string; }[]' is not assignable to parameter of type 'ChatMessage[]'.
+  Type '{ role: string; content: string; }' is not assignable to type 'ChatMessage'.
+    Types of property 'role' are incompatible.
+      Type 'string' is not assignable to type '"system" | "user" | "assistant" | "tool"'.
+E:/RE-SON_work_20260827_004629/app/store/localChat.ts(976,36): error TS2551: Property 'images' does not exist on type 'LocalMsg'. Did you mean 'image'?
+E:/RE-SON_work_20260827_004629/app/store/localChat.ts(1347,11): error TS2345: Argument of type 'ChatMessage[]' is not assignable to parameter of type '{ role: string; content: string; }[]'.
+  Type 'ChatMessage' is not assignable to type '{ role: string; content: string; }'.
+    Types of property 'content' are incompatible.
+      Type 'string | ({ type: "text"; text: string; } | { type: "image_url"; image_url: { url: string; }; })[]' is not assignable to type 'string'.
+        Type '({ type: "text"; text: string; } | { type: "image_url"; image_url: { url: string; }; })[]' is not assignable to type 'string'.
+E:/RE-SON_work_20260827_004629/app/store/localChat.ts(1361,11): error TS2345: Argument of type 'ChatMessage[]' is not assignable to parameter of type '{ role: string; content: string; }[]'.
+  Type 'ChatMessage' is not assignable to type '{ role: string; content: string; }'.
+    Types of property 'content' are incompatible.
+      Type 'string | ({ type: "text"; text: string; } | { type: "image_url"; image_url: { url: string; }; })[]' is not assignable to type 'string'.
+        Type '({ type: "text"; text: string; } | { type: "image_url"; image_url: { url: string; }; })[]' is not assignable to type 'string'.
+E:/RE-SON_work_20260827_004629/app/store/localChat.ts(1671,45): error TS2345: Argument of type '{ role: string; content: string; }[]' is not assignable to parameter of type 'ChatMessage[]'.
+  Type '{ role: string; content: string; }' is not assignable to type 'ChatMessage'.
+    Types of property 'role' are incompatible.
+      Type 'string' is not assignable to type '"system" | "user" | "assistant" | "tool"'.
+E:/RE-SON_work_20260827_004629/app/store/momentsReplies.ts(33,51): error TS2339: Property 'modelIds' does not exist on type '{ id: string; name: string; persona?: string | undefined; }'.
+E:/RE-SON_work_20260827_004629/app/store/worldline.ts(824,53): error TS2339: Property 'message' does not exist on type '{}'.
+E:/RE-SON_work_20260827_004629/app/store/worldline.ts(1204,72): error TS2339: Property 'message' does not exist on type '{}'.
+E:/RE-SON_work_20260827_004629/app/utils/cloneReactNode.ts(8,54): error TS2769: No overload matches this call.
+  Overload 1 of 7, '(element: FunctionComponentElement<ReactElement<T, string | JSXElementConstructor<any>>>, props?: (Partial<...> & Attributes) | undefined, ...children: ReactNode[]): FunctionComponentElement<...>', gave the following error.
+    Argument of type 'ReactElement<unknown, string | JSXElementConstructor<any>> | ReactPortal' is not assignable to parameter of type 'FunctionComponentElement<ReactElement<T, string | JSXElementConstructor<any>>>'.
+      Type 'ReactElement<unknown, string | JSXElementConstructor<any>>' is not assignable to type 'FunctionComponentElement<ReactElement<T, string | JSXElementConstructor<any>>>'.
+        Types of property 'type' are incompatible.
+          Type 'string | JSXElementConstructor<any>' is not assignable to type 'FunctionComponent<ReactElement<T, string | JSXElementConstructor<any>>>'.
+            Type 'string' is not assignable to type 'FunctionComponent<ReactElement<T, string | JSXElementConstructor<any>>>'.
+  Overload 2 of 7, '(element: ReactElement<ReactElement<T, string | JSXElementConstructor<any>>, string | JSXElementConstructor<any>>, props?: (Partial<...> & Attributes) | undefined, ...children: ReactNode[]): ReactElement<...>', gave the following error.
+    Argument of type 'ReactElement<unknown, string | JSXElementConstructor<any>> | ReactPortal' is not assignable to parameter of type 'ReactElement<ReactElement<T, string | JSXElementConstructor<any>>, string | JSXElementConstructor<any>>'.
+      Type 'ReactElement<unknown, string | JSXElementConstructor<any>>' is not assignable to type 'ReactElement<ReactElement<T, string | JSXElementConstructor<any>>, string | JSXElementConstructor<any>>'.
+        Type 'unknown' is not assignable to type 'ReactElement<T, string | JSXElementConstructor<any>>'.
+E:/RE-SON_work_20260827_004629/app/utils/constants.ts(149,18): error TS2339: Property 'removeEventListener' does not exist on type 'Dimensions'.
+E:/RE-SON_work_20260827_004629/app/utils/getContrastingColor.ts(2,19): error TS7016: Could not find a declaration file for module 'color'. 'E:/RE-SON_work_20260827_004629/node_modules/color/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/color` if it exists or add a new declaration (.d.ts) file containing `declare module 'color';`
+E:/RE-SON_work_20260827_004629/app/utils/pinyinSearch.ts(13,7): error TS2353: Object literal may only specify known properties, and 'toneType' does not exist in type 'IPinyinOptions'.
+E:/RE-SON_work_20260827_004629/app/utils/pinyinSearch.ts(21,7): error TS2353: Object literal may only specify known properties, and 'toneType' does not exist in type 'IPinyinOptions'.
+E:/RE-SON_work_20260827_004629/app/utils/storage.ts(62,3): error TS2322: Type 'Promise<readonly string[]>' is not assignable to type 'Promise<string[]>'.
+  The type 'readonly string[]' is 'readonly' and cannot be assigned to the mutable type 'string[]'.
+E:/RE-SON_work_20260827_004629/app/utils/storage.ts(68,3): error TS2322: Type 'Promise<readonly KeyValuePair[]>' is not assignable to type 'Promise<[string, string | null][]>'.
+  The type 'readonly KeyValuePair[]' is 'readonly' and cannot be assigned to the mutable type '[string, string | null][]'.
+E:/RE-SON_work_20260827_004629/app/utils/typeof.ts(41,14): error TS7022: 'isString' implicitly has type 'any' because it does not have a type annotation and is referenced directly or indirectly in its own initializer.
+E:/RE-SON_work_20260827_004629/assets/icon/utils/svgs.tsx(4,16): error TS7006: Parameter 'props' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/assets/icon/utils/svgs.tsx(7,17): error TS7006: Parameter 'props' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/assets/icon/utils/svgs.tsx(10,22): error TS7006: Parameter 'props' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/assets/icon/utils/svgs.tsx(13,18): error TS7006: Parameter 'props' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/assets/icon/utils/svgs.tsx(16,20): error TS7006: Parameter 'props' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/assets/icon/utils/svgs.tsx(19,20): error TS7006: Parameter 'props' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/assets/icon/utils/svgs.tsx(22,15): error TS7006: Parameter 'props' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/assets/icon/utils/svgs.tsx(25,19): error TS7006: Parameter 'props' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/assets/icon/utils/svgs.tsx(28,19): error TS7006: Parameter 'props' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/assets/icon/utils/svgs.tsx(31,16): error TS7006: Parameter 'props' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/assets/icon/utils/svgs.tsx(34,23): error TS7006: Parameter 'props' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/assets/icon/utils/svgs.tsx(37,20): error TS7006: Parameter 'props' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/assets/icon/utils/svgs.tsx(40,19): error TS7006: Parameter 'props' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/assets/icon/utils/svgs.tsx(43,20): error TS7006: Parameter 'props' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/assets/icon/utils/svgs.tsx(46,21): error TS7006: Parameter 'props' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/assets/icon/utils/svgs.tsx(49,22): error TS7006: Parameter 'props' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/assets/icon/utils/svgs.tsx(52,23): error TS7006: Parameter 'props' implicitly has an 'any' type.
+E:/RE-SON_work_20260827_004629/lib/setShortCut.ts(17,13): error TS2801: This condition will always return true since this 'Promise<import("react-native-quick-actions").ShortcutItem>' is always defined.

@@ -1,0 +1,37 @@
+# 调试临时文件
+/RKStorage
+/RKStorage2
+/RKStorage3
+/wc_*.db
+/qr-test.png
+/screen*.png
+/chat-*.png
+/home-*.png
+/input-*.png
+/kb-*.png
+/msg-*.png
+/fn-*.png
+/menu-*.png
+/role-search*.png
+/searchbar.png
+/notif-uri.png
+/header-zoom.png
+/bottom-check.png
+/back-check.png
+/pinned-*.png
+/bundle_offsets*.txt
+/symbols.txt
+/enc-check.txt
+/tsc-errors.txt
+/metro*.pid
+/metro*.log
+/livecam.log
+/.expo/
+/android/*.log
+
+/node_modules/
+/scripts/_localEmbed.generated.js
+
+# 本地 embedding 测试产物
+_rk/
+/assets/models/bge_fp32.onnx.xz  
